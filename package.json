@@ -1,0 +1,21 @@
+{
+	"name": "forkify",
+	"version": "1.0.0",
+	"description": "Recipe application",
+	"scripts": {
+		"start": "parcel index.html",
+		"build": "parcel build index.html"
+	},
+	"author": "Patryk Zawistowski",
+	"license": "ISC",
+	"dependencies": {
+		"core-js": "^3.31.0",
+		"parcel": "^2.9.3",
+		"regenerator-runtime": "^0.13.11",
+		"sass": "^1.63.6"
+	},
+	"devDependencies": {
+		"@parcel/transformer-sass": "^2.9.3",
+		"process": "^0.11.10"
+	}
+}
