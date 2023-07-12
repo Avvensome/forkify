@@ -25,10 +25,6 @@ class ResultsView extends View {
           </li>
         `
   };
-
-
-
-
 }
 
 export default new ResultsView();
