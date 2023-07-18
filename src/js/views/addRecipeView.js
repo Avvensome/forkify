@@ -12,7 +12,7 @@ class AddRecipeView extends View {
 		super();
 		this._addHandlerShowWindow();
 		this._addHandlerHideWindow();
-		this._addHandlerUpload();
+		this.addHandlerUpload();
 	}
 
 	toggleWindow() {
@@ -29,12 +29,12 @@ class AddRecipeView extends View {
 		this._overlay.addEventListener("click", this.toggleWindow.bind(this));
 	}
 
-	_addHandlerUpload(handler) {
+	addHandlerUpload(handler) {
 		this._parentElement.addEventListener("submit", function (e) {
 			e.preventDefault();
-			const dataAdrr = [...new FormData(this)];
-			const data = Object.fromEntries(dataAdrr);
-			handler(data);
+			const dataArr = [...new FormData(this)];
+			const data = Object.fromEntries(dataArr);
+			if (handler) handler(data);
 		});
 	}
 
